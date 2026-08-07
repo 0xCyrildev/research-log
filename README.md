@@ -1,19 +1,19 @@
 # research-log
 
-Security research notes — Web3 and Web2. Exploit postmortems, design flaw patterns, and tooling built off findings.
+Web3 and Web2 security research. Exploit postmortems, design flaw patterns, tooling built off what I find.
 
 ## Why this exists
 
-Most public writeups stop at "here's what happened and here's the patch." That's not analysis, it's a summary. This repo goes one layer deeper on each entry: root cause, what the patch doesn't fix, and where else the same pattern shows up.
+Most public writeups stop at "here's what happened, here's the patch." That's a summary, not analysis. I'm not interested in restating a postmortem that's already public. Every entry here goes one layer past that: root cause, what the patch doesn't actually fix, and where else I've seen the same failure class show up.
 
-Every entry that motivated a tool feature links to the tool. Findings aren't just observed here — some get turned into static checks, fuzzers, or forensics scripts.
+If a finding motivated a feature in one of my tools, it's linked. I don't just write about bug classes — I build things that catch them.
 
 ## Index
 
 ### Web3
 | Entry | Chain/Stack | Class | Status |
 |---|---|---|---|
-| _pending_ | | | |
+| [Ostium: $23.75M for a fake $5,000 Bitcoin](web3/exploit-postmortems/ostium-oracle-exploit.md) | Arbitrum / EVM | oracle trust, off-chain signer compromise | published |
 
 ### Web2
 | Entry | Stack | Class | Status |
@@ -22,15 +22,15 @@ Every entry that motivated a tool feature links to the tool. Findings aren't jus
 
 ## Methodology
 
-See [`methodology/how-i-read-a-codebase.md`](methodology/how-i-read-a-codebase.md) for the process behind these writeups.
+[`methodology/how-i-read-a-codebase.md`](methodology/how-i-read-a-codebase.md) — the actual process behind these writeups and my audit work generally. Not a checklist. Checklists catch known patterns; they don't catch composed attacks, and most of the real damage in a serious audit comes from composition, not a missing modifier on line 40.
 
 ## Related tooling
 
 - [`sui-sec`](https://github.com/0xCyrildev/sui-sec) — static bytecode scanner for Sui Move
-- `necropsy` — EVM post-exploit forensics (call-tree + fund-flow tracing)
-- `flank` — Web3 attack-surface recon (Immunefi/Sherlock pre-audit)
+- `necropsy` — EVM post-exploit forensics, call-tree and fund-flow tracing
+- `flank` — Web3 attack-surface recon for Immunefi/Sherlock pre-audit work
 - `sui-invariant-fuzzer` — invariant fuzzer for Sui Move packages
 
 ## Entry format
 
-New entries follow [`_template.md`](_template.md). Every entry is dated and tagged with the vuln class it belongs to, so patterns across entries stay searchable.
+New entries follow [`_template.md`](_template.md): what happened, why it worked, what the fix misses, where else the pattern shows up, what it means for tooling. If an entry can't answer all five, it's not done yet.
