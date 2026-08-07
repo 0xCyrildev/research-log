@@ -1,6 +1,7 @@
 # research-log
 
-Web3 and Web2 security research. Exploit postmortems, design flaw patterns, tooling built off what I find.
+Web3 and Web2 security research.
+This includes exploit postmortems, design flaw patterns, and progressive tooling built off what I find.
 
 ## Why this exists
 
