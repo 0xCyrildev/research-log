@@ -4,9 +4,10 @@ Web3 and Web2 security research. Exploit postmortems, design flaw patterns, tool
 
 ## Why this exists
 
-Most public writeups stop at "here's what happened, here's the patch." That's a summary, not analysis. I'm not interested in restating a postmortem that's already public. Every entry here goes one layer past that: root cause, what the patch doesn't actually fix, and where else I've seen the same failure class show up.
+The truth is that most public writeups stop at "here's what happened, here's the patch." But that's a summary, not analysis.
+I'm not interested in restating a postmortem that's already public. So every entry here goes one layer past that by showing the root cause, what the patch doesn't actually fix, and where else I've seen the same failure class show up.
 
-If a finding motivated a feature in one of my tools, it's linked. I don't just write about bug classes — I build things that catch them.
+If a finding motivated a feature in one of my tools, it's linked. I don't just write about bug classes but I build things that catch them.
 
 ## Index
 
