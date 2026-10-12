@@ -20,7 +20,7 @@ If a finding motivated a feature in one of my tools, it's linked here. I don't j
 ### Web2
 | Entry | Stack | Class | Status |
 |---|---|---|---|
-| _pending_ | | | |
+| [Twitch switched: the production flag config ships in the APK](web2/twitch-switched.md) | Android APK / bundled web SPA / Eppo | information disclosure, client-side decision authority | published |
 
 ## Methodology
 
